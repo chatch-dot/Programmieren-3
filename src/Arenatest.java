@@ -22,7 +22,19 @@ public class Arenatest {
         Angriff.add(20);
         Angriff.add(25);
         Angriff.add(45);
-        Angriff.add(33);
+        Angriff.add(2);
+
+        ArrayList<Integer> Rüstung = new ArrayList<>();
+        Rüstung.add(50);
+        Rüstung.add(20);
+        Rüstung.add(0);
+        Rüstung.add(1000);
+
+        ArrayList<String> Klasse = new ArrayList<>();
+        Klasse.add("Krieger hat zu viel Glück bei seinen Angriffen");
+        Klasse.add("Schurck - klaut Rüstung für sich");
+        Klasse.add("Geist - reicht durch deine Rüstung");
+        Klasse.add("Tank - hat eine Haut aus Stahl ()");
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
@@ -37,8 +49,8 @@ public class Arenatest {
             System.out.println("drücke 0 Ende");
             System.out.print("Auswahl: ");
 
-            if (scanner.hasNextInt()) {
-            //    System.out.println("Bitte eine ganze Zahl eingeben.");
+            if (!scanner.hasNextInt()) {
+            //  System.out.println("Bitte eine ganze Zahl eingeben.");
                 scanner.next();
                 continue;
             }
@@ -91,7 +103,7 @@ public class Arenatest {
                     while (held2 == -1) {
                         System.out.print("Zweiter Held: ");
 
-                        if (scanner.hasNextInt()) {
+                        if (!scanner.hasNextInt()) {
                             System.out.println("Bitte eine ganze Zahl eingeben.");
                             scanner.next();
                             continue;
