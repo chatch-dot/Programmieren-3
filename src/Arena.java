@@ -65,10 +65,10 @@ public class Arena {
             } else if (menüAuswahl == 1 || menüAuswahl == 2 || menüAuswahl == 3) {
 
                 // zeigt alle Helden an.
-                System.out.println("=== Helden ===");
-                if (menüAuswahl == 1); {
-                    int index = 0;
 
+                if (menüAuswahl == 1) {
+                    int index = 0;
+                    System.out.println("=== Helden ===");
                     while (index < HeldenListe.size()) {
                         System.out.println((index + 1) + ": " + HeldenListe.get(index) + " | Klasse " + Klasse.get(index) + " | Leben: " + Leben.get(index) + " | Angriff: " + Angriff.get(index) + " | Rüstung " + Rüstung.get(index));
 
