@@ -46,6 +46,7 @@ public class Arenatest {
             System.out.println("=== Arena ===");
             System.out.println("drücke 1 Helden anzeigen");
             System.out.println("drücke 2 Kampf starten");
+            System.out.println("drücke 3 Tunier");
             System.out.println("drücke 0 Ende");
             System.out.print("Auswahl: ");
 
@@ -61,19 +62,19 @@ public class Arenatest {
                 läuft = false;
                 System.out.println("Programm beendet.");
 
-            } else if (menüAuswahl == 1 || menüAuswahl == 2) {
+            } else if (menüAuswahl == 1 || menüAuswahl == 2 || menüAuswahl == 3) {
 
                 // zeigt alle Helden an.
                 System.out.println("=== Helden ===");
+                if (menüAuswahl == 1); {
+                    int index = 0;
 
-                int index = 0;
+                    while (index < HeldenListe.size()) {
+                        System.out.println((index + 1) + ": " + HeldenListe.get(index) + " | Klasse " + Klasse.get(index) + " | Leben: " + Leben.get(index) + " | Angriff: " + Angriff.get(index) + " | Rüstung " + Rüstung.get(index));
 
-                while (index < HeldenListe.size()) {
-                    System.out.println((index + 1) + ": " + HeldenListe.get(index) + " | Leben: " + Leben.get(index) + " | Angriff: " + Angriff.get(index));
-
-                    index++;
+                        index++;
+                    }
                 }
-
                 if (menüAuswahl == 2) {
 
                     // den ersten Held wählen.
@@ -170,7 +171,9 @@ public class Arenatest {
 
                     System.out.println("Beide Helden haben wieder volle Lebenspunkte.");
                 }
-
+                if (menüAuswahl == 3) {
+                    System.out.println("Are you ready to rumble!!!?");
+                } else {}
             } else {
                 System.out.println("Ungültige Auswahl. Bitte 0, 1 oder 2 wählen.");
             }

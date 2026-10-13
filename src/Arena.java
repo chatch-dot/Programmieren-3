@@ -22,7 +22,19 @@ public class Arena {
         Angriff.add(20);
         Angriff.add(25);
         Angriff.add(45);
-        Angriff.add(33);
+        Angriff.add(2);
+
+        ArrayList<Integer> Rüstung = new ArrayList<>();
+        Rüstung.add(50);
+        Rüstung.add(20);
+        Rüstung.add(0);
+        Rüstung.add(1000);
+
+        ArrayList<String> Klasse = new ArrayList<>();
+        Klasse.add("Krieger hat zu viel Glück bei seinen Angriffen");
+        Klasse.add("Schurck - klaut Rüstung für sich");
+        Klasse.add("Geist - reicht durch deine Rüstung");
+        Klasse.add("Tank - hat eine Haut aus Stahl ()");
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
@@ -34,11 +46,12 @@ public class Arena {
             System.out.println("=== Arena ===");
             System.out.println("drücke 1 Helden anzeigen");
             System.out.println("drücke 2 Kampf starten");
+            System.out.println("drücke 3 Tunier");
             System.out.println("drücke 0 Ende");
             System.out.print("Auswahl: ");
 
-            if (scanner.hasNextInt()) {
-                //    System.out.println("Bitte eine ganze Zahl eingeben.");
+            if (!scanner.hasNextInt()) {
+                //  System.out.println("Bitte eine ganze Zahl eingeben.");
                 scanner.next();
                 continue;
             }
@@ -49,19 +62,19 @@ public class Arena {
                 läuft = false;
                 System.out.println("Programm beendet.");
 
-            } else if (menüAuswahl == 1 || menüAuswahl == 2) {
+            } else if (menüAuswahl == 1 || menüAuswahl == 2 || menüAuswahl == 3) {
 
                 // zeigt alle Helden an.
                 System.out.println("=== Helden ===");
+                if (menüAuswahl == 1); {
+                    int index = 0;
 
-                int index = 0;
+                    while (index < HeldenListe.size()) {
+                        System.out.println((index + 1) + ": " + HeldenListe.get(index) + " | Klasse " + Klasse.get(index) + " | Leben: " + Leben.get(index) + " | Angriff: " + Angriff.get(index) + " | Rüstung " + Rüstung.get(index));
 
-                while (index < HeldenListe.size()) {
-                    System.out.println((index + 1) + ": " + HeldenListe.get(index) + " | Leben: " + Leben.get(index) + " | Angriff: " + Angriff.get(index));
-
-                    index++;
+                        index++;
+                    }
                 }
-
                 if (menüAuswahl == 2) {
 
                     // den ersten Held wählen.
@@ -91,7 +104,7 @@ public class Arena {
                     while (held2 == -1) {
                         System.out.print("Zweiter Held: ");
 
-                        if (scanner.hasNextInt()) {
+                        if (!scanner.hasNextInt()) {
                             System.out.println("Bitte eine ganze Zahl eingeben.");
                             scanner.next();
                             continue;
@@ -158,7 +171,9 @@ public class Arena {
 
                     System.out.println("Beide Helden haben wieder volle Lebenspunkte.");
                 }
-
+                if (menüAuswahl == 3) {
+                    System.out.println("Are you ready to rumble!!!?");
+                } else {}
             } else {
                 System.out.println("Ungültige Auswahl. Bitte 0, 1 oder 2 wählen.");
             }
@@ -167,6 +182,7 @@ public class Arena {
         scanner.close();
     }
 }
+
 
 
 
