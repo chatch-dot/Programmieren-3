@@ -31,27 +31,25 @@ public class Arena {
         System.out.println("chose your Character!!!");
 
         Scanner Scanner = new Scanner(System.in);
-        //System.out.println("Characer1");
+        System.out.println("Characer1");
         int werte = Scanner.nextInt();
 
-        String str = HeldenListe.get(werte);
+        String str = HeldenListe.get(werte -1);
         System.out.println("Character" + str);
-
-        int LP = Leben.get(werte);
+        int LP = Leben.get(werte -1);
         System.out.println("Character" + LP);
-
-        int AP = Angriff.get(werte);
+        int AP = Angriff.get(werte -1);
         System.out.println("Character" + AP);
 
 
         System.out.println("Characer2");
         int werte2 = Scanner.nextInt();
 
-        String str2 = HeldenListe.get(werte2);
+        String str2 = HeldenListe.get(werte2 -1);
         System.out.println("Character" + str2);
-        int LP2 = Leben.get(werte2);
+        int LP2 = Leben.get(werte2 -1);
         System.out.println("Character" + LP2);
-        int AP2 = Angriff.get(werte2);
+        int AP2 = Angriff.get(werte2 -1);
         System.out.println("Character" + AP2);
 
 
@@ -59,5 +57,5 @@ public class Arena {
 }
 
 
- */
+
 
