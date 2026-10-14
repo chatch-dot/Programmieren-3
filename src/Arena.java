@@ -21,7 +21,7 @@ public class Arena {
         ArrayList<Integer> Angriff = new ArrayList<>();
         Angriff.add(20);
         Angriff.add(25);
-        Angriff.add(10);
+        Angriff.add(33);
         Angriff.add(2);
 
         ArrayList<Integer> Rüstung = new ArrayList<>();
@@ -51,7 +51,7 @@ public class Arena {
             System.out.print("Auswahl: ");
 
             if (!scanner.hasNextInt()) {
-                //  System.out.println("Bitte eine ganze Zahl eingeben.");
+                System.out.println("Bitte eine ganze Zahl eingeben.");
                 scanner.next();
                 continue;
             }
@@ -133,6 +133,7 @@ public class Arena {
                     System.out.println("///////////////////////////////////////////////");
                     System.out.println(" ");
 
+                    int AngriffeaufFred = 0;
                     while (leben1 > 0 && leben2 > 0) {
 
                         int angreifer;
@@ -146,12 +147,37 @@ public class Arena {
                             verteidiger = held1;
                         }
 
+                        int kritschaden = random.nextInt(5);
                         // der random krit schaden
-                        int angriffsschaden = Angriff.get(angreifer) + random.nextInt(5);
+
+                        int angriffsschaden = Angriff.get(angreifer) + kritschaden;
                         int rüstung = Rüstung.get(verteidiger);
 
+                        // Fähigkeit vom Geist
+                        if (angreifer == 2) {
+                            rüstung = 0;
+                        }
+
+                        //Fähigkeit vom Krieger
+                        if (angreifer == 0){
+                            angriffsschaden = Angriff.get(angreifer) + kritschaden * 2;
+                        }
+
                         int schaden = Math.max(0, angriffsschaden - rüstung);
+
+                        //Fähigkeit vom Schurcken
+                        if (verteidiger == 1){
+                        AngriffeaufFred++;
+                            if (AngriffeaufFred % 3 == 0) {
+                                schaden = 0;
+
+                                System.out.println(HeldenListe.get(verteidiger) + " weicht dem Angriff aus!");
+                            }
+                        }
+
                         int verbleibendesLeben;
+
+
                         if (held1AmZug) {
                             leben2 -= schaden;
                             verbleibendesLeben = leben2;
@@ -159,7 +185,10 @@ public class Arena {
                             leben1 -= schaden;
                             verbleibendesLeben = leben1;
                         }
-
+                        if (kritschaden > 0){System.out.println(
+                                "Kritischer Treffer von " + " " + HeldenListe.get(angreifer) + "!" + kritschaden
+                        );
+                        }
                         System.out.println(HeldenListe.get(angreifer) + " trifft " + HeldenListe.get(verteidiger) + " für " + schaden + "schaden" + "."  + HeldenListe.get(verteidiger) + " hat noch " + "| " + rüstung + "  Rüstung " + "und" + " " + verbleibendesLeben + " Lebenspunkte.");
                         System.out.println(" ");
                         // Alternate turns.
