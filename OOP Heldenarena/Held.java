@@ -14,3 +14,9 @@ public class Held {
         this.ap = ap;
     }
 }
+
+public void anzeigen() {
+    System.out.println(" | name: " + name + " | Leben: " + hp + " | Angriff: " + atack + " | Rüstung: " + armor + " | Armor Pen" + ap
+    );
+}
+}
