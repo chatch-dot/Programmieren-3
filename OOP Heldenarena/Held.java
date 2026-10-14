@@ -13,10 +13,10 @@ public class Held {
         this.armor = armor;
         this.ap = ap;
     }
-}
+
 
 public void anzeigen() {
     System.out.println(" | name: " + name + " | Leben: " + hp + " | Angriff: " + atack + " | Rüstung: " + armor + " | Armor Pen" + ap
     );
-}
+ }
 }
