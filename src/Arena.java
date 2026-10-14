@@ -21,18 +21,18 @@ public class Arena {
         ArrayList<Integer> Angriff = new ArrayList<>();
         Angriff.add(20);
         Angriff.add(25);
-        Angriff.add(45);
+        Angriff.add(10);
         Angriff.add(2);
 
         ArrayList<Integer> Rüstung = new ArrayList<>();
-        Rüstung.add(50);
-        Rüstung.add(20);
+        Rüstung.add(10);
+        Rüstung.add(5);
         Rüstung.add(0);
-        Rüstung.add(1000);
+        Rüstung.add(19);
 
         ArrayList<String> Klasse = new ArrayList<>();
-        Klasse.add("Krieger hat zu viel Glück bei seinen Angriffen");
-        Klasse.add("Schurck - klaut Rüstung für sich");
+        Klasse.add("Krieger - hat zu viel Glück bei seinen Angriffen");
+        Klasse.add("Schurck - weicht jeder 3. atacke aus");
         Klasse.add("Geist - reicht durch deine Rüstung");
         Klasse.add("Tank - hat eine Haut aus Stahl ()");
 
@@ -123,13 +123,15 @@ public class Arena {
                         }
                     }
 
-                    // tomporeres Leben.
+                    // tomporeres Leben und Rüstung.
                     int leben1 = Leben.get(held1);
                     int leben2 = Leben.get(held2);
-
                     boolean held1AmZug = true;
 
+                    System.out.println(" ");
                     System.out.println("=== " + HeldenListe.get(held1) + " gegen " + HeldenListe.get(held2) + " ===");
+                    System.out.println("///////////////////////////////////////////////");
+                    System.out.println(" ");
 
                     while (leben1 > 0 && leben2 > 0) {
 
@@ -145,10 +147,11 @@ public class Arena {
                         }
 
                         // der random krit schaden
-                        int schaden = Angriff.get(angreifer) + random.nextInt(5);
+                        int angriffsschaden = Angriff.get(angreifer) + random.nextInt(5);
+                        int rüstung = Rüstung.get(verteidiger);
 
+                        int schaden = Math.max(0, angriffsschaden - rüstung);
                         int verbleibendesLeben;
-
                         if (held1AmZug) {
                             leben2 -= schaden;
                             verbleibendesLeben = leben2;
@@ -157,8 +160,8 @@ public class Arena {
                             verbleibendesLeben = leben1;
                         }
 
-                        System.out.println(HeldenListe.get(angreifer) + " trifft " + HeldenListe.get(verteidiger) + " für " + schaden + "schaden" + "."  + HeldenListe.get(verteidiger) + " hat noch " + verbleibendesLeben + " Lebenspunkte.");
-
+                        System.out.println(HeldenListe.get(angreifer) + " trifft " + HeldenListe.get(verteidiger) + " für " + schaden + "schaden" + "."  + HeldenListe.get(verteidiger) + " hat noch " + "| " + rüstung + "  Rüstung " + "und" + " " + verbleibendesLeben + " Lebenspunkte.");
+                        System.out.println(" ");
                         // Alternate turns.
                         held1AmZug = !held1AmZug;
                     }
