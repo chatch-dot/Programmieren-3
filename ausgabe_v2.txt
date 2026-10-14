@@ -1,0 +1,51 @@
+=== Arena ===
+drücke 1 Helden anzeigen
+drücke 2 Kampf starten
+drücke 3 Tunier
+drücke 0 Ende
+Auswahl: 2
+Erster Held: 1
+Zweiter Held: 2
+ 
+=== MaxMaximus gegen FlinkerFrederick ===
+///////////////////////////////////////////////
+ 
+MaxMaximus trifft FlinkerFrederick für 15schaden.FlinkerFrederick hat noch | 5  Rüstung und 65 Lebenspunkte.
+ 
+Kritischer Treffer von  FlinkerFrederick !3
+FlinkerFrederick trifft MaxMaximus für 18schaden.MaxMaximus hat noch | 10  Rüstung und 132 Lebenspunkte.
+ 
+Kritischer Treffer von  MaxMaximus !3
+MaxMaximus trifft FlinkerFrederick für 21schaden.FlinkerFrederick hat noch | 5  Rüstung und 44 Lebenspunkte.
+ 
+Kritischer Treffer von  FlinkerFrederick !4
+FlinkerFrederick trifft MaxMaximus für 19schaden.MaxMaximus hat noch | 10  Rüstung und 113 Lebenspunkte.
+ 
+FlinkerFrederick weicht dem Angriff aus!
+MaxMaximus trifft FlinkerFrederick für 0schaden.FlinkerFrederick hat noch | 5  Rüstung und 44 Lebenspunkte.
+ 
+FlinkerFrederick trifft MaxMaximus für 15schaden.MaxMaximus hat noch | 10  Rüstung und 98 Lebenspunkte.
+ 
+MaxMaximus trifft FlinkerFrederick für 15schaden.FlinkerFrederick hat noch | 5  Rüstung und 29 Lebenspunkte.
+ 
+Kritischer Treffer von  FlinkerFrederick !3
+FlinkerFrederick trifft MaxMaximus für 18schaden.MaxMaximus hat noch | 10  Rüstung und 80 Lebenspunkte.
+ 
+Kritischer Treffer von  MaxMaximus !4
+MaxMaximus trifft FlinkerFrederick für 23schaden.FlinkerFrederick hat noch | 5  Rüstung und 6 Lebenspunkte.
+ 
+Kritischer Treffer von  FlinkerFrederick !3
+FlinkerFrederick trifft MaxMaximus für 18schaden.MaxMaximus hat noch | 10  Rüstung und 62 Lebenspunkte.
+ 
+FlinkerFrederick weicht dem Angriff aus!
+Kritischer Treffer von  MaxMaximus !2
+MaxMaximus trifft FlinkerFrederick für 0schaden.FlinkerFrederick hat noch | 5  Rüstung und 6 Lebenspunkte.
+ 
+Kritischer Treffer von  FlinkerFrederick !2
+FlinkerFrederick trifft MaxMaximus für 17schaden.MaxMaximus hat noch | 10  Rüstung und 45 Lebenspunkte.
+ 
+Kritischer Treffer von  MaxMaximus !1
+MaxMaximus trifft FlinkerFrederick für 6schaden.FlinkerFrederick hat noch | 5  Rüstung und 0 Lebenspunkte.
+ 
+Sieger: MaxMaximus
+Beide Helden haben wieder volle Lebenspunkte.
