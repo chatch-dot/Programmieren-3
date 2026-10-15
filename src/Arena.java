@@ -187,9 +187,7 @@ public class Arena {
                             leben1 -= schaden;
                             verbleibendesLeben = leben1;
                         }
-                        if (kritschaden > 0){System.out.println(
-                                "Kritischer Treffer von " + " " + HeldenListe.get(angreifer) +  " " + "!" + kritschaden
-                        );
+                        if (kritschaden > 0){System.out.println("Kritischer Treffer von " + " " + HeldenListe.get(angreifer) +  " " + "!" + kritschaden);
                         }
                         System.out.println(HeldenListe.get(angreifer) + " trifft " + HeldenListe.get(verteidiger) + " für " + schaden + "schaden" + "."  + HeldenListe.get(verteidiger) + " hat noch " + "| " + rüstung + "  Rüstung " + "und" + " " + verbleibendesLeben + " Lebenspunkte.");
                         System.out.println(" ");
