@@ -48,5 +48,21 @@ public void anzeigen() {
     public void reset() {
         currenthp = maxhp;
     }
+    public int getAP() {
+        return ap;
+    }
+
+    public boolean equals(Held obj) {
+        if (obj.name.equals(this.name)) {
+            return false;
+        }
+        if (obj.atack == this.atack) {
+            return false;
+        }
+
+        return true;
+
+
+    }
 }
 

@@ -8,7 +8,7 @@ public class Fight {
     private Random random;
 
     public Fight(Held held1, Held held2, Random random) {
-        if (held1 == held2) {
+        if (held1 == held2 /*gleiche speicheradr*/ || held1.equals(held2)  /*inhalt*/) {
             throw new IllegalArgumentException(
                     "Select two different heroes."
             );
@@ -64,8 +64,10 @@ public class Fight {
 
         int criticalDamage = random.nextInt(5);
         int attackDamage = attacker.getAtack() + criticalDamage;
+        int effectiveArmor = Math.max(0, defender.getArmor() - attacker.getAP());
 
-        return Math.max(0, attackDamage - defender.getArmor());
+        return Math.max(0, attackDamage - effectiveArmor);
+      //  return Math.max(0, attackDamage - defender.getArmor());
     }
 
     private void performAttack(Held attacker, Held defender) {
