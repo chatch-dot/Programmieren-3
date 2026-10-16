@@ -4,7 +4,7 @@ public class Held {
     String name;
      private int maxhp;
      private int currenthp;
-     private int atack;
+     private int attack;
      private int armor;
      private int ap;
 
@@ -12,14 +12,14 @@ public class Held {
         this.name = name;
         this.maxhp = maxhp;
         this.currenthp = currenthp;
-        this.atack = atack;
+        this.attack = atack;
         this.armor = armor;
         this.ap = ap;
     }
 
 
 public void anzeigen() {
-    System.out.println(" | name: " + name + " | Leben: " + currenthp + " | Angriff: " + atack + " | Rüstung: " + armor + " | Armor Pen" + ap
+    System.out.println(" | name: " + name + " | Leben: " + currenthp + " | Angriff: " + attack + " | Rüstung: " + armor + " | Armor Pen" + ap
     );}
     public String getName() {
         return name;
@@ -30,7 +30,7 @@ public void anzeigen() {
     }
 
     public int getAtack() {
-        return atack;
+        return attack;
     }
 
     public int getArmor() {
@@ -68,7 +68,7 @@ public void anzeigen() {
         }
 
         return this.name.equals(obj.name)
-                && this.atack == obj.atack;
+                && this.attack == obj.attack;
     }
 
 
