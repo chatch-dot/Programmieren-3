@@ -51,7 +51,7 @@ public void anzeigen() {
     public int getAP() {
         return ap;
     }
-
+    /*
     public boolean equals(Held obj) {
         if (obj.name.equals(this.name)) {
             return false;
@@ -61,8 +61,16 @@ public void anzeigen() {
         }
 
         return true;
+    */
+    public boolean equals(Held obj) {
+        if (obj == null) {
+            return false;
+        }
 
-
+        return this.name.equals(obj.name)
+                && this.atack == obj.atack;
     }
+
+
 }
 

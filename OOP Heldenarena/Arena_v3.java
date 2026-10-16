@@ -6,8 +6,14 @@ public class Arena_v3 {
         Held held2 = new Held("Geistergertrude", 80, 80, 25, 5, 1);
         Random random = new Random(42);
 
-        Fight fight = new Fight(held1, held2, random);
-        Held winner = fight.start();
+        //Fight fight = new Fight(held1, held2, random);
+        try {
+            Fight fight = new Fight(held1, held2, random);
+            fight.start();
+        } catch (SameHeroException e) {
+            System.out.println(e.getMessage());
+        }
+        //Held winner = fight.start();
     }
 }
 
