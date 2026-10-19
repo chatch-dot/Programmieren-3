@@ -31,8 +31,9 @@ public class Arena_v3 {
 
         ArrayList<Held> heroes = new ArrayList<>();
 
-        heroes.add(new Held("MaxMaximus", 150, 150, 20, 10, 0));
-        heroes.add(new Held("Geistergertrude", 80, 80, 25, 5, 1));
+        heroes.add(new Warrior("MaxMaximus",150,40,20,1 ));
+        heroes.add(new Held("Geistergertrude", 80, 20,0,1));
+        heroes.add(new Rogue("FlinkerFrederick", 80, 25, 5, 1));
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);

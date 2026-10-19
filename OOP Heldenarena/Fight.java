@@ -63,7 +63,7 @@ public class Fight {
     private int calculateDamage(Held attacker, Held defender) {
 
         int criticalDamage = random.nextInt(5);
-        int attackDamage = attacker.getAtack() + criticalDamage;
+        int attackDamage = attacker.getAttack() + criticalDamage;
         int effectiveArmor = Math.max(0, defender.getArmor() - attacker.getAP());
 
         return Math.max(0, attackDamage - effectiveArmor);
