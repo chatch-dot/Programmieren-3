@@ -76,7 +76,9 @@ public void anzeigen() {
                 && this.attack == obj.attack;
     }
 
+
      */
+
     @Override
     public boolean equals(Object obj) {
 
@@ -93,6 +95,9 @@ public void anzeigen() {
         return this.name.equals(other.name)
                 && this.attack == other.attack;
     }
+
+
+
 
 }
 

@@ -61,7 +61,15 @@ public class Fight {
     private int calculateDamage(Held attacker, Held defender) {
 
         int criticalDamage = random.nextInt(5);
+        int normalCriticalDamage = criticalDamage;
         criticalDamage = attacker.calculateCriticalDamage(criticalDamage);
+        if (criticalDamage > 0) {
+            System.out.println("Critical hit!");
+        }
+
+        if (criticalDamage > normalCriticalDamage) {
+            System.out.println("Warrior doubles the critical damage!");
+        }
         int attackDamage = attacker.getAttack() + criticalDamage;
         int effectiveArmor = Math.max(0, defender.getArmor() - attacker.getAP());
 
