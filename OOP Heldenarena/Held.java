@@ -1,4 +1,3 @@
-import java.util.Random;
 public class Held {
 
      private String name;
@@ -19,8 +18,9 @@ public class Held {
 
 
 public void anzeigen() {
-    System.out.println(this.getClass() + "| name: " + name + " | Leben: " + currenthp + " | Angriff: " + attack + " | Rüstung: " + armor + " | Armor Pen" + ap
+    System.out.println(this.getClass() + "| name: " + name + " | Leben: " + currenthp + " | Angriff: " + attack + " | Rüstung: " + armor + " | Armor Pen |" + ap
     );
+
     }
     public String getName() {
         return name;
@@ -58,41 +58,41 @@ public void anzeigen() {
     public int getAP() {
         return ap;
     }
-    /*
-    private int calculateDamage(Held attacker, Held defender) {
 
-        int criticalDamage = random.nextInt(5);
-        int attackDamage = attacker.getAttack() + criticalDamage;
-        int effectiveArmor = Math.max(0, defender.getArmor() - attacker.getAP());
-
-        return Math.max(0, attackDamage - effectiveArmor);
-
-    }
-
-     */
-    public int calculateCriticalDamage(int criticalDamage) {
+    public int calculateCriticalDamage(int criticalDamage ) {
         return criticalDamage;
     }
     /*
-    public boolean equals(Held obj) {
-        if (obj.name.equals(this.name)) {
-            return false;
-        }
-        if (obj.atack == this.atack) {
-            return false;
-        }
-
-        return true;
-    */
+    @Override
     public boolean equals(Held obj) {
         if (obj == null) {
             return false;
         }
 
+
+
+
         return this.name.equals(obj.name)
                 && this.attack == obj.attack;
     }
 
+     */
+    @Override
+    public boolean equals(Object obj) {
+
+        if (obj == null) {
+            return false;
+        }
+
+        if (!(obj instanceof Held)) {
+            return false;
+        }
+
+        Held other = (Held) obj;
+
+        return this.name.equals(other.name)
+                && this.attack == other.attack;
+    }
 
 }
 

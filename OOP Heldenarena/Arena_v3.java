@@ -1,26 +1,3 @@
-/*
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Random;
-
-public class Arena_v3 {
-    public static void main(String[] args) {
-        Held held1 = new Held("MaxMaximus", 150, 150, 20, 10, 0);
-        Held held2 = new Held("Geistergertrude", 80, 80, 25, 5, 1);
-        Random random = new Random(42);
-
-        //Fight fight = new Fight(held1, held2, random);
-        try {
-            Fight fight = new Fight(held1, held2, random);
-            fight.start();
-        } catch (SameHeroException e) {
-            System.out.println(e.getMessage());
-        }
-        //Held winner = fight.start();
-    }
-}
-
- */
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -31,10 +8,21 @@ public class Arena_v3 {
 
         ArrayList<Held> heroes = new ArrayList<>();
 
-        heroes.add(new Warrior("MaxMaximus",150,40,20,1 ));
-        heroes.add(new Held("Geistergertrude", 80, 20,0,1));
-        heroes.add(new Rogue("FlinkerFrederick", 80, 25, 5, 1));
+        heroes.add(new Warrior("MaxMaximus",150,20,20,1 ));
+        heroes.add(new Held("Geistergertrude",80,20,0,1));
+        heroes.add(new Rogue("FlinkerFrederick", 100, 25, 5, 1));
+        heroes.add(new Rogue("Gustav", 100, 25, 5, 1));
 
+        Held testHeld = new Held(
+                "Geistergertrude",
+                80,
+                20,
+                0,
+                1
+        );
+
+        System.out.println(heroes.contains(testHeld));
+        //System.out.println(heroes.contains(Rogue));
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
 
@@ -48,7 +36,7 @@ public class Arena_v3 {
             System.out.println("| |_ / _` | '_ \\| __/ _` / __| |/ _ \\   / _ \\ | '__/ _ \\/ _` | '_ \\ / _` |");
             System.out.println("|  _| (_| | | | | || (_| \\__ \\ |  __/  / ___ \\| | |  __/ (_| | | | | (_| |");
             System.out.println("|_|  \\__,_|_| |_|\\__\\__,_|___/_|\\___| /_/   \\_\\_|  \\___|\\__,_|_| |_|\\__,_|");
-
+            // https://www.asciiart.eu/text-to-ascii-art
             System.out.println();
 
             System.out.println("=== Arena ===");
