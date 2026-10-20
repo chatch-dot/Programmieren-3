@@ -50,11 +50,26 @@ public void anzeigen() {
         currenthp = Math.max(0, currenthp - Math.max(0, damage));
     }
 
+    public void reset() {
+        currenthp = maxhp;
+    }
 
 
     public int getAP() {
         return ap;
     }
+    /*
+    private int calculateDamage(Held attacker, Held defender) {
+
+        int criticalDamage = random.nextInt(5);
+        int attackDamage = attacker.getAttack() + criticalDamage;
+        int effectiveArmor = Math.max(0, defender.getArmor() - attacker.getAP());
+
+        return Math.max(0, attackDamage - effectiveArmor);
+
+    }
+
+     */
     public int calculateCriticalDamage(int criticalDamage) {
         return criticalDamage;
     }

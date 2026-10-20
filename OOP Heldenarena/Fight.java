@@ -9,9 +9,7 @@ public class Fight {
 
     public Fight(Held held1, Held held2, Random random) {
         if (held1 == held2 /*gleiche speicheradr*/ || held1.equals(held2)  /*inhalt*/) {
-            throw new  SameHeroException(
-                    "Select two different heroes."
-            );
+            throw new  SameHeroException("Select two different heroes.");
         }
 
         this.held1 = held1;
