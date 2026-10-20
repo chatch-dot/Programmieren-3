@@ -42,15 +42,15 @@ public class Arena_v3 {
         boolean running = true;
 
         while (running) {
-            /*
+
             System.out.println("  __             _            _           _                               ");
-            System.out.println(" / _| __ _ _ __ | |_ __ _ ___(_) ___     / \   _ __ ___  __ _ _ __   __ _ ");
-            System.out.println("| |_ / _` | '_ \| __/ _` / __| |/ _ \   / _ \ | '__/ _ \/ _` | '_ \ / _` |");
-            System.out.println("|  _| (_| | | | | || (_| \__ \ |  __/  / ___ \| | |  __/ (_| | | | | (_| |");
-            System.out.println("|_|  \__,_|_| |_|\__\__,_|___/_|\___| /_/   \_\_|  \___|\__,_|_| |_|\__,_|");
+            System.out.println(" / _| __ _ _ __ | |_ __ _ ___(_) ___     / \\   _ __ ___  __ _ _ __   __ _ ");
+            System.out.println("| |_ / _` | '_ \\| __/ _` / __| |/ _ \\   / _ \\ | '__/ _ \\/ _` | '_ \\ / _` |");
+            System.out.println("|  _| (_| | | | | || (_| \\__ \\ |  __/  / ___ \\| | |  __/ (_| | | | | (_| |");
+            System.out.println("|_|  \\__,_|_| |_|\\__\\__,_|___/_|\\___| /_/   \\_\\_|  \\___|\\__,_|_| |_|\\__,_|");
 
             System.out.println();
-             */
+
             System.out.println("=== Arena ===");
             System.out.println("1: Display heroes");
             System.out.println("2: Start fight");
