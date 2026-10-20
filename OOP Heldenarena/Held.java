@@ -62,22 +62,10 @@ public void anzeigen() {
     public int calculateCriticalDamage(int criticalDamage ) {
         return criticalDamage;
     }
-    /*
-    @Override
-    public boolean equals(Held obj) {
-        if (obj == null) {
-            return false;
-        }
 
-
-
-
-        return this.name.equals(obj.name)
-                && this.attack == obj.attack;
+    public int modifyIncomingDamage(int damage, Held attacker) {
+        return damage;
     }
-
-
-     */
 
     @Override
     public boolean equals(Object obj) {
@@ -95,7 +83,10 @@ public void anzeigen() {
         return this.name.equals(other.name)
                 && this.attack == other.attack;
     }
-
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(name, attack);
+    }
 
 
 

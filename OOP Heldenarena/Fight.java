@@ -75,17 +75,25 @@ public class Fight {
 
         return Math.max(0, attackDamage - effectiveArmor);
       //  return Math.max(0, attackDamage - defender.getArmor());
+
     }
 
     private void performAttack(Held attacker, Held defender) {
 
         int damage = calculateDamage(attacker, defender);
 
+        damage = defender.modifyIncomingDamage(damage, attacker);
+
         damage = Math.min(damage, defender.getCurrenthp());
+
+        int hpBeforeAttack = defender.getCurrenthp();
 
         defender.takeDamage(damage);
 
-        System.out.println (attacker.getName() + " hits " + defender.getName() + " for " + damage + " damage.");
+
+        int actualDamage = hpBeforeAttack - defender.getCurrenthp();
+
+        System.out.println (attacker.getName() + " hits " + defender.getName() + " for " + actualDamage + " damage.");
         System.out.println (defender.getName() + " has " + defender.getCurrenthp() + " health and " + defender.getArmor() + " armor remaining.");
         System.out.println ();
     }

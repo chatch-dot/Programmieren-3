@@ -1,4 +1,4 @@
-/*
+
 public class Ghost extends Held {
 
     public Ghost(String name,int currenthp, int attack, int armor, int ap) {
@@ -6,9 +6,12 @@ public class Ghost extends Held {
     }
 
     @Override
-
+    public int modifyIncomingDamage(int damage, Held attacker) {
+        return attacker.getAP();
     }
+
 }
 
 
- */
+
+

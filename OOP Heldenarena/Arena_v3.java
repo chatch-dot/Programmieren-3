@@ -11,18 +11,7 @@ public class Arena_v3 {
         heroes.add(new Warrior("MaxMaximus",150,20,20,1 ));
         heroes.add(new Held("Geistergertrude",80,20,0,1));
         heroes.add(new Rogue("FlinkerFrederick", 100, 25, 5, 1));
-        heroes.add(new Rogue("Gustav", 100, 25, 5, 1));
-
-        Held testHeld = new Held(
-                "Geistergertrude",
-                80,
-                20,
-                0,
-                1
-        );
-
-        System.out.println(heroes.contains(testHeld));
-        //System.out.println(heroes.contains(Rogue));
+        //heroes.add(new Tank("Gustav", 100, 25, 5, 1));
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
 
@@ -39,7 +28,7 @@ public class Arena_v3 {
             // https://www.asciiart.eu/text-to-ascii-art
             System.out.println();
 
-            System.out.println("=== Arena ===");
+            System.out.println("======= Arena ======");
             System.out.println("1: Display heroes");
             System.out.println("2: Start fight");
             System.out.println("3: Tournament");
@@ -109,7 +98,6 @@ public class Arena_v3 {
 
         System.out.println();
     }
-
 
     private static Held selectHero(Scanner scanner, ArrayList<Held> heroes, String prompt) {
 
