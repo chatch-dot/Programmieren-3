@@ -8,10 +8,12 @@ public class Arena_v3 {
 
         ArrayList<Held> heroes = new ArrayList<>();
 
-        heroes.add(new Warrior("MaxMaximus",150,20,20,1 ));
+        heroes.add(new Warrior("MaxMaximus",150,30,15,1 ));
         heroes.add(new Held("Geistergertrude",80,20,0,1));
         heroes.add(new Rogue("FlinkerFrederick", 100, 25, 5, 1));
-        heroes.add(new Tank("Gustav", 100, 25, 5, 1));
+        heroes.add(new Tank("Gustav", 100, 25, 10, 1));
+        heroes.add(new Healer("Uwe",100,20,10,1));
+
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
 

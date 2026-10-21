@@ -67,6 +67,10 @@ public void anzeigen() {
         return damage;
     }
 
+    public void heal(int amount) {
+        currenthp = Math.min(maxhp, currenthp + amount);
+    }
+
     @Override
     public boolean equals(Object obj) {
 

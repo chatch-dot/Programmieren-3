@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Fight {
+public class Fight extends Herocompetition{
 
     private Held held1;
     private Held held2;
@@ -18,6 +18,7 @@ public class Fight {
         this.held1Turn = true;
     }
 
+    @Override
     public Held start() {
 
         held1.reset();

@@ -7,7 +7,7 @@ public class Tank extends Held {
     @Override
     public void takeDamage(int damage) {
 
-        damage = Math.min(damage, 10);
+        damage = Math.min(damage, 20);
 
         super.takeDamage(damage);
     }
