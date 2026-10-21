@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Fight extends Herocompetition{
+public class Fight extends HeroCompetition{
 
     private Held held1;
     private Held held2;

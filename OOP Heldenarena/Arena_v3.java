@@ -13,7 +13,12 @@ public class Arena_v3 {
         heroes.add(new Rogue("FlinkerFrederick", 100, 25, 5, 1));
         heroes.add(new Tank("Gustav", 100, 25, 10, 1));
         heroes.add(new Healer("Uwe",100,20,10,1));
+        Held heldA = new Held("TestHeld", 100, 20, 5, 1);
+        Held heldB = new Held("TestHeld", 200, 20, 10, 5);
 
+        System.out.println("Same object: " + heldA.equals(heldA));
+        System.out.println("Same by definition: " + heldA.equals(heldB));
+        System.out.println("Held vs String: " + heldA.equals("TestHeld"));
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
 
@@ -25,7 +30,7 @@ public class Arena_v3 {
             System.out.println("  __             _            _            _                               ");
             System.out.println(" / _| __ _ _ __ | |_ __ _ ___(_) ___      / \\   _ __ ___  __ _ _ __   __ _ ");
             System.out.println("| |_ / _` | '_ \\| __/ _` / __| |/ _ \\    / _ \\ | '__/ _ \\/ _` | '_ \\ / _` |");
-            System.out.println("|  _| (_| | | | | || (_| \\__ \\ |  __/   / ___ \\| | |  __/ (_| | | | | (_| |");
+            System.out.println("|  _| (_| | | | | || (_| \\\\__ \\ |  __/   / ___ \\| | |  __/ (_| | | | | (_| |");
             System.out.println("|_|  \\__,_|_| |_|\\__\\__,_|___/_|\\ ___  /_/   \\_\\_|  \\___|\\__,_|_| |_|\\__,_|");
             // https://www.asciiart.eu/text-to-ascii-art
             System.out.println();
