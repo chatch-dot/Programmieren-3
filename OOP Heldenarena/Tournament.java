@@ -26,6 +26,13 @@ public class Tournament extends HeroCompetition {
             for (int i = 0; i < round.size(); i += 2) {
 
                 Held held1 = round.get(i);
+
+                if (i + 1 >= round.size()) {
+                    System.out.println(held1.getName() + " gets a bye!");
+                    winners.add(held1);
+                    continue;
+                }
+
                 Held held2 = round.get(i + 1);
 
                 Fight fight = new Fight(held1, held2, random);

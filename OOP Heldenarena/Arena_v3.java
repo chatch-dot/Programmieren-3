@@ -13,6 +13,7 @@ public class Arena_v3 {
         heroes.add(new Rogue("FlinkerFrederick", 100, 25, 5, 1));
         heroes.add(new Tank("Gustav", 100, 25, 10, 1));
         heroes.add(new Healer("Uwe",100,20,10,1));
+        heroes.add(new Rogue("Uwe",100,20,10,1));
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
@@ -29,7 +30,7 @@ public class Arena_v3 {
             System.out.println("|_|  \\__,_|_| |_|\\__\\__,_|___/_|\\ ___  /_/   \\_\\_|  \\___|\\__,_|_| |_|\\__,_|");
             // https://www.asciiart.eu/text-to-ascii-art
             System.out.println();
-            System.out.println("                            .-'|)");
+            System.out.println("                            .-'|\")");
             System.out.println("                            |-'\\|");
             System.out.println("                                |   _.-'`.");
             System.out.println("                               _|-\"'_.-'|.`.");
@@ -69,7 +70,7 @@ public class Arena_v3 {
 
                 Fight fight = null;
 
-                // Repeat the second selection until the fight is valid.
+
                 while (fight == null) {
 
                     Held held2 = selectHero(scanner, heroes, "Second hero: ");
@@ -85,11 +86,14 @@ public class Arena_v3 {
 
             } else if (selection == 3) {
                 System.out.println("Are you ready to rumble?");
+                try {
+                    Tournament tournament = new Tournament(heroes, random);
 
-                Tournament tournament = new Tournament(heroes, random);
+                    tournament.start();
+                } catch (SameHeroException e) {
+                    System.out.println(e.getMessage());
 
-                tournament.start();
-
+                }
             } else {
                 System.out.println("Invalid selection. Please select 0, 1, 2 or 3.");
             }
