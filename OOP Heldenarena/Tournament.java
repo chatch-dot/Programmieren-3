@@ -15,6 +15,31 @@ public class Tournament extends HeroCompetition {
     @Override
     public Held start() {
 
-        return null;
+        ArrayList<Held> round = new ArrayList<>(participants);
+
+        while (round.size() > 1) {
+
+            Collections.shuffle(round, random);
+
+            ArrayList<Held> winners = new ArrayList<>();
+
+            for (int i = 0; i < round.size(); i += 2) {
+
+                Held held1 = round.get(i);
+                Held held2 = round.get(i + 1);
+
+                Fight fight = new Fight(held1, held2, random);
+
+                winners.add(fight.start());
+            }
+
+            round = winners;
+        }
+
+        System.out.println(
+                "Tournament Winner: " + round.get(0).getName()
+        );
+
+        return round.get(0);
     }
 }
