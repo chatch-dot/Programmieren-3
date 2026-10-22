@@ -21,6 +21,12 @@ public class Tournament extends HeroCompetition {
 
             Collections.shuffle(round, random);
 
+            System.out.println("Heroes still in tournament:");
+
+            for (Held held : round) {
+                System.out.println("- " + held.getName());
+            }
+
             ArrayList<Held> winners = new ArrayList<>();
 
             for (int i = 0; i < round.size(); i += 2) {
@@ -34,7 +40,12 @@ public class Tournament extends HeroCompetition {
                 }
 
                 Held held2 = round.get(i + 1);
-
+                System.out.println();
+                System.out.println("Tournament pairing:");
+                System.out.println("Held 1: " + held1.getName());
+                System.out.println("Held 2: " + held2.getName());
+                System.out.println("Same reference: " + (held1 == held2));
+                System.out.println("equals(): " + held1.equals(held2));
                 Fight fight = new Fight(held1, held2, random);
 
                 winners.add(fight.start());

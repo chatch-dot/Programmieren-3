@@ -13,7 +13,7 @@ public class Arena_v3 {
         heroes.add(new Rogue("FlinkerFrederick", 100, 25, 5, 1));
         heroes.add(new Tank("Gustav", 100, 25, 10, 1));
         heroes.add(new Healer("Uwe",100,20,10,1));
-        heroes.add(new Rogue("Uwe",100,20,10,1));
+        heroes.add(new Rogue("Bert",100,20,10,1));
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random(42);
